@@ -27,10 +27,9 @@ function getStatus(receiptNumber) {
 }
 
 
-//getStatus('WAC1619250005').then(console.log);
+//getStatus('WACxxxxxxxx').then(console.log);
 
 process.argv.forEach(function (val, index, array) {
-  //console.log(index + ': ' + val);
   if (index > 1) {
     getStatus(val).then(function (status) {
        console.log("Status for '" + val + "' is '" + status + "'");	
