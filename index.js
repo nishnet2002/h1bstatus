@@ -32,7 +32,7 @@ function getStatus(receiptNumber) {
 process.argv.forEach(function (val, index, array) {
   if (index > 1) {
     getStatus(val).then(function (status) {
-       console.log("Status for '" + val + "' is '" + status + "'");	
+       process.stdout.write("Status for '" + val + "' is '" + status + "'\n");	
     });
   }
 });
